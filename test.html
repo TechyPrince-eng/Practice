@@ -1,0 +1,136 @@
+<!-- Write a function that checks whether a given number exists in an array or not. -->
+ <script>
+
+function check(arr, num) {
+        var found = false;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === num) {
+                console.log("Exist");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            console.log("Not exist");
+        }
+    }
+
+    check([1, 2, 3, 4, 5], 3);
+
+
+
+
+
+
+
+// // Write a function that classifies a person based on age                    
+// // Infant: 0–2
+// ● Toddler: 3–5
+// ● Child: 6–12
+// ● Teenager: 13–17
+// ● Adult: 18+
+function age(num) {
+    var INFANT = "Infant";
+    var TODDLER = "Toddler";
+    var CHILD = "Child";
+    var TEENAGER = "Teenager";
+    var ADULT = "Adult";
+    if (num < 2 && num >= 0) {
+        console.log("Infant");
+        }
+    else if (num < 5 && num > 2) {
+        console.log("Toddler");
+        }
+    else if (num < 12 && num > 5) {
+        console.log("Child");
+        }
+    else if (num < 18 && num > 12) {
+        console.log("Teenager");
+        }
+    else {
+        console.log("Adult");
+        }
+    }   
+    
+    age(45);
+
+
+//     Write a program that identifies the time of day based on a 24-hour input:
+// ● Morning: 5–11
+// ● Afternoon: 12–16
+// ● Evening: 17–20
+// ● Night: 21–4
+function time(hour) {
+    if (hour >= 5 && hour <= 11) {
+        console.log("Morning");
+    } else if (hour >= 12 && hour <= 16) {
+        console.log("Afternoon");
+    } else if (hour >= 17 && hour <= 20) {
+        console.log("Evening");
+    } else if (hour >= 21 || hour <= 4) {
+        console.log("Night");
+    } else {
+        console.log("Invalid hour");
+    }
+}   
+time(10); 
+
+    // Write a program to calculate and display the sum of all odd numbers between 0 to 100.
+function calculate() {
+    let sum = 0;
+    for (let i = 1; i <= 100; i += 2) {
+        sum += i;
+    }
+    console.log("Sum of odd numbers between 0 to 100 is: " + sum);  
+}  
+calculate();
+
+
+//    given an array of strings, return only those strings that have more than characters.
+
+
+
+function filterStrings(arr) {
+    return arr.filter(str => str.length > 5);
+}
+const strings = ["hi", "hello", "sun", "sky"];
+const filteredStrings = filterStrings(strings);
+console.log(filteredStrings);
+
+
+
+
+
+
+// Write a function that takes a month as input and returns the season:
+// ● Autumn: September, October, November,Winter: December, January, February,
+// ● Spring: March, April, May,Summer: June, July, August
+
+function Season(month) {
+    switch (month) {
+        case "September":
+        case "October":
+        case "November":
+            return "Autumn";
+        case "December":
+        case "January":
+        case "February":
+            return "Winter";
+        case "March":
+        case "April":
+        case "May":
+            return "Spring";
+        case "June":
+        case "July":
+        case "August":
+            return "Summer";
+        default:
+            return "Invalid month";
+    }
+}
+
+const month = "March";
+const season = Season(month);
+console.log(`The season for ${month} is ${season}.`); 
+
+ </script>
